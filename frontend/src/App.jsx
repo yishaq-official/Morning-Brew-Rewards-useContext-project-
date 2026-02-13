@@ -1,24 +1,22 @@
-import { useState } from 'react';
-import { UserContext } from './UserContext';
-import Header from './Navbar';
-
-
-
+import React from 'react';
+import { UserProvider } from './UserContext';
+import Navbar from './Navbar';
+import CoffeeMenu from './CoffeeMenu';
 
 function App() {
-  
-      const [user, setUser] = useState({
-      name: 'Yishaq',
-      points: 1000
-    });
-
   return (
-    <UserContext.Provider value={user}>
-      <h1>Morning Brew Rewards</h1>
-
-        <Header />
-    </UserContext.Provider>
-  )
+    <UserProvider>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <header style={{ textAlign: 'center', padding: '2rem' }}>
+            <h1>Start your morning right.</h1>
+          </header>
+          <CoffeeMenu />
+        </div>
+      </div>
+    </UserProvider>
+  );
 }
 
-export default App
+export default App;
