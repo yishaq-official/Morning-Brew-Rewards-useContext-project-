@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { UserContext } from './UserContext';
-import Header from 'Header';
+import Header from './Header';
 
 
-const [user, setUser] = useState({
-  name: 'Yishaq',
-  points: 1000
-});
+
 
 function App() {
   
+      const [user, setUser] = useState({
+      name: 'Yishaq',
+      points: 1000
+    });
 
   return (
     <UserContext.Provider value={user}>
