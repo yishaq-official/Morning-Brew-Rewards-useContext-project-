@@ -5,7 +5,7 @@ const Navbar = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#3e2723', color: 'white' }}>
+    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#7ae218', color: 'white' }}>
       <h2>☕ Morning Brew</h2>
       <div>
         <span>Welcome, <strong>{user.name}</strong></span> | 
